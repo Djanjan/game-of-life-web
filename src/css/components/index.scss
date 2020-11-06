@@ -1,0 +1,277 @@
+  /*************************************/
+  /**
+  /**         list-flex CLASSES
+  /**
+  /*************************************/
+
+.list-flex {
+  /*display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: var(--space-xs);*/
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: stretch;
+}
+
+.item-flex {
+  margin: 10px 10px;
+  flex-basis: 300px;
+}
+
+.item-flex-0 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  //flex: 1 1 300px;
+}
+
+.item-flex-1 {
+  flex-grow: 2;
+  flex-shrink: 9;
+  //flex: 2 9 300px;
+}
+
+.item-flex-2 {
+  flex-grow: 3;
+  flex-shrink: 3;
+  //flex: 3 3 300px;
+}
+
+.item-flex-3 {
+  flex-grow: 4;
+  flex-shrink: 4;
+  //flex: 4 4 300px;
+}
+
+.item-flex-5 {
+  flex-grow: 5;
+  flex-shrink: 2;
+  //flex: 5 2 300px;
+}
+
+.item-flex-6 {
+  flex-grow: 6;
+  flex-shrink: 7;
+  //flex: 6 7 300px;
+}
+
+.item-flex-7 {
+  flex-grow: 7;
+  flex-shrink: 4;
+  //flex: 7 4 300px;
+}
+
+.item-flex-8 {
+  flex-grow: 8;
+  flex-shrink: 2;
+  //flex: 8 2 300px;
+}
+
+.item-flex-9 {
+  flex-grow: 9;
+  flex-shrink: 5;
+  //flex: 9 5 300px;
+}
+  
+  /*************************************/
+  /**
+  /**         CARD CLASSES
+  /**
+  /*************************************/
+
+.card {
+    //box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.41);
+    border-radius: 4px 4px 4px 4px;
+    border: 0px solid #000000;
+    background-color: var(--color-contrast-lower);
+}
+
+.card-nav-bottom {
+  padding: 10px;
+}
+
+  /*************************************/
+  /**
+  /**         BUTTON CLASSES
+  /**
+  /*************************************/
+
+.v-btn {
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-weight: 500;
+  letter-spacing: 0.0892857143em;
+  justify-content: center;
+  outline: 0;
+  position: relative;
+  text-decoration: none;
+  text-indent: 0.0892857143em;
+  text-transform: uppercase;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: var(--color-bg);
+  color: var(--color-contrast-high);
+}
+
+.v-btn--outlined {
+  border: thin solid;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.v-btn--rounded {
+  border-radius: 28px;
+}
+
+.v-btn--round {
+  border-radius: 50%;
+}
+
+.v-btn--fab {
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+.v-btn--icon {
+  background-color: transparent;
+  color: var(--color-contrast-high);
+}
+
+.v-btn:not(.v-btn--round).v-size--default{
+  height: 36px;
+  min-width: 64px;
+  padding: 0 16px;
+}
+
+.v-btn--icon.v-size--default{
+  height: 36px;
+  min-width: 36px;
+}
+
+.v-btn--fab.v-size--default {
+  height: 56px;
+  width: 56px;
+}
+
+.v-btn:not(.v-btn--round).v-size--large {
+  height: 44px;
+  min-width: 78px;
+  padding: 0 19.5555555556px;
+}
+
+.v-btn--fab.v-size--large {
+  height: 64px;
+  width: 64px;
+}
+
+.v-btn--icon.v-size--large{
+  height: 64px;
+  min-width: 64px;
+}
+
+.v-btn.v-size--small {
+  font-size: .75rem;
+}
+
+.v-btn.v-size--x-large {
+  font-size: 1rem;
+}
+
+.v-btn.v-size--x-small {
+  font-size: .625rem;
+}
+
+  /*************************************/
+  /**
+  /**         ELEVATION CLASSES
+  /**
+  /*************************************/
+
+.elevation-2 { box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)!important; }
+.elevation-20 { box-shadow: 0 10px 13px -6px rgba(0,0,0,.2),0 20px 31px 3px rgba(0,0,0,.14),0 8px 38px 7px rgba(0,0,0,.12)!important; }
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+  
+  /*************************************/
+  /**
+  /**         RIPPLE CLASSES
+  /**
+  /*************************************/
+  
+  .ripple-outer {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .ripples {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    pointer-events: none;
+  }
+  .ripple {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .grow-enter-active,
+  .grow-enter-to-active {
+    transition: all 1500ms ease-out;
+  }
+  .grow-leave-active,
+  .grow-leave-to-active {
+    transition: all 700ms ease-out;
+  }
+  
+  .grow-enter {
+    transform: scale(0);
+    opacity: 1;
+  }
+  
+  .grow-enter-to {
+    transform: scale(4);
+    opacity: 1;
+  }
+  
+  .grow-leave {
+    transform: scale(4);
+    opacity: 1;
+  }
+  .grow-leave-to {
+    transform: scale(4);
+    opacity: 0;
+  }
+
+  /*************************************/
+  /**
+  /**         MATERIAL ICONS CLASSES
+  /**
+  /*************************************/
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

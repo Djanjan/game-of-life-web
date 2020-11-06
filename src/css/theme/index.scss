@@ -1,0 +1,71 @@
+:root, [data-theme="default"] {
+  --color-primary: #ab47bc;
+  --color-primary-light: #df78ef;
+  --color-primary-dark:#790e8b;
+  --color-secondary: #00bcd4;
+  --color-secondary-light: #62efff;
+  --color-secondary-dark: #008ba3;
+  --color-bg: #ffeeff;
+  --color-contrast-lower: white; // hsl(0, 0%, 95%)
+  --color-contrast-low: hsl(240, 1%, 83%);
+  --color-contrast-medium: hsl(240, 1%, 48%);
+  --color-contrast-high: hsl(240, 4%, 20%);
+  --color-contrast-higher: black;
+}
+
+[data-theme] {
+  background-color: var(--color-bg);
+  color: var(--color-contrast-high);
+}
+
+[data-theme="dark"] {
+  --color-primary: #ab47bc;
+  --color-primary-light: #df78ef;
+  --color-primary-dark:#790e8b;
+  --color-secondary: #00bcd4;
+  --color-secondary-light: #62efff;
+  --color-secondary-dark: #008ba3;
+  --color-bg: #303030; //#303030  rgb(26, 26, 26)
+  --color-contrast-lower: #424242; //#424242  hsl(240, 6%, 15%)
+  --color-contrast-low: hsl(180, 4%, 25%);
+  --color-contrast-medium: hsl(240, 1%, 57%);
+  --color-contrast-high: hsl(0, 0%, 89%);
+  --color-contrast-higher: white;
+}
+
+.color-primary:not(.v-btn--outlined) {
+  background-color: var(--color-primary);
+  border-color:var(--color-primary);
+  color: white;
+}
+
+.color-primary--text {
+  color: var(--color-primary);
+  caret-color: var(--color-primary);
+}
+
+.color-secondary:not(.v-btn--outlined) {
+  background-color: var(--color-secondary);
+  border-color:var(--color-secondary);
+  color: white;
+}
+
+.color-secondary--text {
+  color: var(--color-secondary);
+  caret-color: var(--color-secondary);
+}
+
+.color-white--text {
+  color: white;
+}
+
+.color-black--text {
+  color: black;
+}
+
+
+//vue-slider-component
+$themeColor: var(--color-secondary);
+
+@import '~vue-slider-component/lib/theme/material.scss';
+//vue-slider-component
